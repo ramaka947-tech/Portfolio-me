@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rama KA — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pink: { DEFAULT: '#e91e8c', light: '#ff6eb4' },
+            dark: { DEFAULT: '#1a1a1a', card: '#111111' }
+          },
+          fontFamily: { poppins: ['Poppins', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-[#1a1a1a] text-white overflow-x-hidden">
+
+  <!-- ── NAV ── -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#111]/90 backdrop-blur-md border-b border-white/5">
+    <div class="flex justify-between items-center px-6 md:px-16 py-5">
+      <div class="text-xl font-bold">Rama<span class="text-[#e91e8c]">.</span>KA</div>
+
+      <!-- Desktop menu -->
+      <ul class="hidden md:flex gap-8 list-none">
+        <li><a href="#apropos" class="nav-link text-sm text-white/60 no-underline">À propos</a></li>
+        <li><a href="#projets" class="nav-link text-sm text-white/60 no-underline">Projets</a></li>
+        <li><a href="#competences" class="nav-link text-sm text-white/60 no-underline">Compétences</a></li>
+        <li><a href="#bakeli" class="nav-link text-sm text-white/60 no-underline">Bakeli</a></li>
+        <li><a href="#contact-section" class="nav-link text-sm text-white/60 no-underline">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger -->
+      <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-2" onclick="toggleMenu()">
+        <span class="w-6 h-0.5 bg-white block"></span>
+        <span class="w-6 h-0.5 bg-white block"></span>
+        <span class="w-6 h-0.5 bg-white block"></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="flex-col gap-4 px-6 pb-6 bg-[#111]">
+      <a href="#apropos" class="nav-link text-sm text-white/60 no-underline" onclick="toggleMenu()">À propos</a>
+      <a href="#projets" class="nav-link text-sm text-white/60 no-underline" onclick="toggleMenu()">Projets</a>
+      <a href="#competences" class="nav-link text-sm text-white/60 no-underline" onclick="toggleMenu()">Compétences</a>
+      <a href="#bakeli" class="nav-link text-sm text-white/60 no-underline" onclick="toggleMenu()">Bakeli</a>
+      <a href="#contact-section" class="nav-link text-sm text-white/60 no-underline" onclick="toggleMenu()">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="gradient-hero min-h-screen flex items-center pt-28 pb-16 px-6 md:px-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center max-w-6xl mx-auto w-full">
+
+      <!-- Photo -->
+      <div class="relative flex justify-center md:justify-start">
+        <img src="IMAGE/PP.jpeg" class="w-full max-w-[320px] md:max-w-[420px] rounded-3xl block shadow-2xl"/>
+        <div class="absolute -bottom-4 -right-4 md:-right-4 bg-[#e91e8c] text-white px-4 py-2 md:px-5 md:py-3 rounded-2xl text-xs md:text-sm font-semibold leading-snug shadow-lg">
+          🎓 Étudiante en<br>Management &<br>Technologies Numériques
+        </div>
+      </div>
+
+      <!-- Texte -->
+      <div class="mt-8 md:mt-0">
+        <p class="text-[#e91e8c] text-xs tracking-widest uppercase mb-4">Portfolio 2026</p>
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">
+          Rama <span class="text-[#e91e8c]">KA</span>
+        </h1>
+        <p class="text-lg md:text-xl font-semibold text-white/80 mb-5">Étudiante en Management & Technologies Numériques</p>
+        <p class="text-[14px] md:text-[15px] text-white/55 leading-relaxed mb-8 max-w-lg">
+          Titulaire d'une <strong class="text-white/80">Licence Management Informatisé des Organisations</strong> à l'Université Assane SECK de Ziguinchor. En formation <strong class="text-white/80">Fullstack JavaScript & DevOps</strong> à Bakeli, je m'intéresse à la <strong class="text-white/80">transformation numérique</strong> et l'<strong class="text-white/80">informatique décisionnelle</strong>.
+        </p>
+        <div class="flex gap-3 flex-wrap">
+          <a href="#contact-section" class="btn-pink text-white px-6 md:px-8 py-3 rounded-full text-sm font-semibold no-underline">Me contacter</a>
+          <a href="#projets" class="btn-outline text-white px-6 md:px-8 py-3 rounded-full text-sm font-semibold no-underline">Voir mes projets</a>
+          <a href="Doc/CV_Rama_KA Off.pdf" download="CV_Rama_KA.pdf" class="btn-outline text-white px-6 md:px-8 py-3 rounded-full text-sm font-semibold no-underline">📄 Mon CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STATS ── -->
+  <div class="bg-[#111] border-t border-b border-white/5 py-10 flex flex-wrap justify-center gap-10 md:gap-20 px-6">
+    <div class="text-center">
+      <p class="text-4xl font-bold text-[#e91e8c]">7</p>
+      <p class="text-sm text-white/40 mt-2">Projets réalisés</p>
+    </div>
+    <div class="text-center">
+      <p class="text-4xl font-bold text-[#e91e8c]">3</p>
+      <p class="text-sm text-white/40 mt-2">Langues parlées</p>
+    </div>
+    <div class="text-center">
+      <p class="text-4xl font-bold text-[#e91e8c]">3</p>
+      <p class="text-sm text-white/40 mt-2">Ans de formation</p>
+    </div>
+  </div>
+
+  <!-- ── À PROPOS ── -->
+  <section class="py-16 md:py-24 px-6 md:px-16 max-w-6xl mx-auto" id="apropos">
+    <p class="flex items-center gap-3 text-[11px] tracking-widest uppercase text-[#e91e8c] mb-4 before:content-[''] before:w-5 before:h-0.5 before:bg-[#e91e8c]">À propos</p>
+    <h2 class="text-3xl md:text-4xl font-bold mb-10 md:mb-12">Qui suis-<span class="text-[#e91e8c]">je</span> ?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
+      <div class="space-y-5 text-[15px] text-white/60 leading-relaxed">
+        <p>Passionnée par l'<strong class="text-white">innovation numérique</strong> et la <strong class="text-white">data</strong>, je suis une étudiante sénégalaise qui construit son avenir à l'intersection du management et de la technologie.</p>
+        <p>Mon parcours à l'<strong class="text-white">Université Assane SECK de Ziguinchor</strong> m'a donné des bases solides en systèmes d'information, comptabilité et communication d'entreprise.</p>
+        <p>Mon stage chez <strong class="text-white">Kossam SDE</strong> m'a confrontée aux réalités du terrain : gestion budgétaire, contrôle de gestion, collecte de données. Une expérience qui a renforcé ma conviction que la <strong class="text-white">data est au cœur des décisions</strong>.</p>
+      </div>
+      <div class="space-y-4">
+        <div class="flex gap-3 items-center">
+          <div class="w-9 h-9 rounded-lg bg-[#e91e8c]/15 flex items-center justify-center text-lg shrink-0">📍</div>
+          <div><p class="text-[11px] text-white/35 uppercase tracking-wide">Localisation</p><p class="text-sm font-medium">Dakar, Sénégal</p></div>
+        </div>
+        <div class="flex gap-3 items-center">
+          <div class="w-9 h-9 rounded-lg bg-[#e91e8c]/15 flex items-center justify-center text-lg shrink-0">🎓</div>
+          <div><p class="text-[11px] text-white/35 uppercase tracking-wide">Niveau actuel</p><p class="text-sm font-medium">Licence MIO — obtenue 2025</p></div>
+        </div>
+        <div class="flex gap-3 items-center">
+          <div class="w-9 h-9 rounded-lg bg-[#e91e8c]/15 flex items-center justify-center text-lg shrink-0">🏫</div>
+          <div><p class="text-[11px] text-white/35 uppercase tracking-wide">Université</p><p class="text-sm font-medium">Assane SECK de Ziguinchor</p></div>
+        </div>
+        <div class="flex gap-3 items-center">
+          <div class="w-9 h-9 rounded-lg bg-[#e91e8c]/15 flex items-center justify-center text-lg shrink-0">💻</div>
+          <div><p class="text-[11px] text-white/35 uppercase tracking-wide">Formation tech</p><p class="text-sm font-medium">Bakeli School of Technology</p></div>
+        </div>
+        <div class="flex gap-3 items-center">
+          <div class="w-9 h-9 rounded-lg bg-[#e91e8c]/15 flex items-center justify-center text-lg shrink-0">🇬🇧</div>
+          <div><p class="text-[11px] text-white/35 uppercase tracking-wide">Anglais</p><p class="text-sm font-medium">En renforcement — SUNY Old Westbury, NY</p></div>
+        </div>
+        <div class="flex gap-3 items-center">
+          <div class="w-9 h-9 rounded-lg bg-[#e91e8c]/15 flex items-center justify-center text-lg shrink-0">🎯</div>
+          <div><p class="text-[11px] text-white/35 uppercase tracking-wide">Objectif</p><p class="text-sm font-medium">Data Analyst — Informatique décisionnelle</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJETS ── -->
+  <section class="bg-[#111] border-t border-b border-white/5 py-16 md:py-24 px-6 md:px-16" id="projets">
+    <div class="max-w-6xl mx-auto">
+      <p class="flex items-center gap-3 text-[11px] tracking-widest uppercase text-[#e91e8c] mb-4 before:content-[''] before:w-5 before:h-0.5 before:bg-[#e91e8c]">Réalisations</p>
+      <h2 class="text-3xl md:text-4xl font-bold mb-10 md:mb-12">Mes <span class="text-[#e91e8c]">projets</span></h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="card-hover top-line relative bg-white/[0.04] border border-white/[0.08] rounded-2xl overflow-hidden cursor-pointer">
+          <img src="IMAGE/Sadio Mane.png" alt="" class="w-full">
+          <div class="p-6">
+            <p class="text-[11px] text-[#e91e8c]/70 tracking-widest font-semibold mb-2">PROJET 01</p>
+            <h3 class="text-[17px] font-semibold mb-2">Site vitrine — Sadio Mané</h3>
+            <p class="text-[13px] text-white/50 leading-relaxed mb-4">Site de présentation du footballeur sénégalais. Premier projet web, conçu en équipe de 4. Structure HTML sémantique, mise en page CSS et design responsive.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-[#e91e8c]/10 text-[#e91e8c] text-[11px] px-3 py-1 rounded-full font-medium">HTML</span>
+              <span class="bg-[#e91e8c]/10 text-[#e91e8c] text-[11px] px-3 py-1 rounded-full font-medium">CSS</span>
+              <span class="bg-[#e91e8c]/10 text-[#e91e8c] text-[11px] px-3 py-1 rounded-full font-medium">Équipe de 4</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-hover top-line relative bg-white/[0.04] border border-white/[0.08] rounded-2xl overflow-hidden cursor-pointer">
+          <img src="IMAGE/gestion-scolaire.png" alt="" class="w-full">
+          <div class="p-6">
+            <p class="text-[11px] text-[#e91e8c]/70 tracking-widest font-semibold mb-2">PROJET 02</p>
+            <h3 class="text-[17px] font-semibold mb-2">Gestion des comptes utilisateurs</h3>
+            <p class="text-[13px] text-white/50 leading-relaxed mb-4">Application avec authentification sécurisée, gestion des sessions et base de données relationnelle. Développée en équipe de 3.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-[#e91e8c]/10 text-[#e91e8c] text-[11px] px-3 py-1 rounded-full font-medium">PHP</span>
+              <span class="bg-[#e91e8c]/10 text-[#e91e8c] text-[11px] px-3 py-1 rounded-full font-medium">SQL</span>
+              <span class="bg-[#e91e8c]/10 text-[#e91e8c] text-[11px] px-3 py-1 rounded-full font-medium">HTML/CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-hover top-line relative bg-white/[0.04] border border-white/[0.08] rounded-2xl overflow-hidden cursor-pointer">
+          <img src="IMAGE/VBA.png" alt="" class="w-full">
+          <div class="p-6">
+            <p class="text-[11px] text-[#e91e8c]/70 tracking-widest font-semibold mb-2">PROJET 03</p>
+            <h3 class="text-[17px] font-semibold mb-2">Outil de gestion scolaire</h3>
+            <p class="text-[13px] text-white/50 leading-relaxed mb-4">Application Excel avec macros VBA pour le suivi des notes et des inscriptions. Génération automatique de rapports et calculs. Équipe de 3.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-[#e91e8c]/10 text-[#e91e8c] text-[11px] px-3 py-1 rounded-full font-medium">VBA</span>
+              <span class="bg-[#e91e8c]/10 text-[#e91e8c] text-[11px] px-3 py-1 rounded-full font-medium">Excel</span>
+              <span class="bg-[#e91e8c]/10 text-[#e91e8c] text-[11px] px-3 py-1 rounded-full font-medium">Automatisation</span>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJETS BAKELI ── -->
+  <section class="py-16 md:py-24 px-6 md:px-16" id="bakeli">
+    <div class="max-w-6xl mx-auto">
+      <p class="flex items-center gap-3 text-[11px] tracking-widest uppercase text-[#e91e8c] mb-4 before:content-[''] before:w-5 before:h-0.5 before:bg-[#e91e8c]">Formation Bakeli</p>
+      <h2 class="text-3xl md:text-4xl font-bold mb-3">Projets <span class="text-[#e91e8c]">personnels</span></h2>
+      <p class="text-white/40 text-sm mb-10">Réalisés dans le cadre de ma formation Fullstack à Bakeli School of Technology — HTML & CSS</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="card-hover top-line relative bg-white/[0.04] border border-white/[0.08] rounded-2xl overflow-hidden cursor-pointer">
+          <img src="IMAGE/Home-Unik.png" alt="" class="w-full">
+          <div class="p-6">
+            <p class="text-[11px] text-[#e91e8c]/70 tracking-widest font-semibold mb-2">BAKELI 01</p>
+            <h3 class="text-[17px] font-semibold mb-2">Home Unik — Immobilier</h3>
+            <p class="text-[13px] text-white/50 leading-relaxed mb-4">Landing page d'une agence immobilière sénégalaise. Recherche de biens, types de propriétés, listings avec prix en FCFA.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-[#e91e8c]/10 text-[#e91e8c] text-[11px] px-3 py-1 rounded-full font-medium">HTML</span>
+              <span class="bg-[#e91e8c]/10 text-[#e91e8c] text-[11px] px-3 py-1 rounded-full font-medium">CSS</span>
+            </div>
+            <a href="https://ramaka947-tech.github.io/Tache_5/" target="_blank" class="inline-flex items-center gap-2 text-sm text-[#e91e8c] font-medium no-underline">Voir le site →</a>
+          </div>
+        </div>
+
+        <div class="card-hover top-line relative bg-white/[0.04] border border-white/[0.08] rounded-2xl overflow-hidden cursor-pointer">
+          <img src="IMAGE/Weli food.png" alt="" class="w-full">
+          <div class="p-6">
+            <p class="text-[11px] text-[#e91e8c]/70 tracking-widest font-semibold mb-2">BAKELI 02</p>
+            <h3 class="text-[17px] font-semibold mb-2">Weli Food — Restaurant</h3>
+            <p class="text-[13px] text-white/50 leading-relaxed mb-4">Landing page d'un restaurant sénégalais. Hero avec plats, section services et coordonnées de contact.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-[#e91e8c]/10 text-[#e91e8c] text-[11px] px-3 py-1 rounded-full font-medium">HTML</span>
+              <span class="bg-[#e91e8c]/10 text-[#e91e8c] text-[11px] px-3 py-1 rounded-full font-medium">CSS</span>
+            </div>
+            <a href="https://ramaka947-tech.github.io/Tache_4/" target="_blank" class="inline-flex items-center gap-2 text-sm text-[#e91e8c] font-medium no-underline">Voir le site →</a>
+          </div>
+        </div>
+
+        <div class="card-hover top-line relative bg-white/[0.04] border border-white/[0.08] rounded-2xl overflow-hidden cursor-pointer">
+          <img src="IMAGE/Niam_Niam.png" alt="" class="w-full">
+          <div class="p-6">
+            <p class="text-[11px] text-[#e91e8c]/70 tracking-widest font-semibold mb-2">BAKELI 03</p>
+            <h3 class="text-[17px] font-semibold mb-2">Niam Niam — Menu restaurant</h3>
+            <p class="text-[13px] text-white/50 leading-relaxed mb-4">Landing page d'un restaurant avec menu de plats sénégalais, horaires d'ouverture et tarifs.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-[#e91e8c]/10 text-[#e91e8c] text-[11px] px-3 py-1 rounded-full font-medium">HTML</span>
+              <span class="bg-[#e91e8c]/10 text-[#e91e8c] text-[11px] px-3 py-1 rounded-full font-medium">CSS</span>
+            </div>
+            <a href="https://ramaka947-tech.github.io/Tache_6/" target="_blank" class="inline-flex items-center gap-2 text-sm text-[#e91e8c] font-medium no-underline">Voir le site →</a>
+          </div>
+        </div>
+
+        <div class="card-hover top-line relative bg-white/[0.04] border border-white/[0.08] rounded-2xl overflow-hidden cursor-pointer">
+          <img src="IMAGE/Gestion_Scolaire_JS.png" alt="" class="w-full">
+          <div class="p-6">
+            <p class="text-[11px] text-[#e91e8c]/70 tracking-widest font-semibold mb-2">BAKELI 04</p>
+            <h3 class="text-[17px] font-semibold mb-2">App Gestion Étudiants — CRUD & LocalStorage</h3>
+            <p class="text-[13px] text-white/50 leading-relaxed mb-4">Application web de gestion d’étudiants avec CRUD (ajout, modification, suppression) et sauvegarde des données via localStorage.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-[#e91e8c]/10 text-[#e91e8c] text-[11px] px-3 py-1 rounded-full font-medium">JavaScript</span>
+              <span class="bg-[#e91e8c]/10 text-[#e91e8c] text-[11px] px-3 py-1 rounded-full font-medium">HTML</span>
+              <span class="bg-[#e91e8c]/10 text-[#e91e8c] text-[11px] px-3 py-1 rounded-full font-medium">Tailwind CSS</span>
+              <span class="bg-[#e91e8c]/10 text-[#e91e8c] text-[11px] px-3 py-1 rounded-full font-medium">LocalStorage</span>
+            </div>
+            <a href="https://ramaka947-tech.github.io/Bakeli_04/" target="_blank" class="inline-flex items-center gap-2 text-sm text-[#e91e8c] font-medium no-underline">Tester l'application →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── COMPÉTENCES ── -->
+  <section class="py-16 md:py-24 px-6 md:px-16 max-w-6xl mx-auto" id="competences">
+    <p class="flex items-center gap-3 text-[11px] tracking-widest uppercase text-[#e91e8c] mb-4 before:content-[''] before:w-5 before:h-0.5 before:bg-[#e91e8c]">Savoir-faire</p>
+    <h2 class="text-3xl md:text-4xl font-bold mb-10 md:mb-12">Mes <span class="text-[#e91e8c]">compétences</span></h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="space-y-5">
+        <div>
+          <div class="flex justify-between text-sm mb-2"><span>HTML / CSS</span><span class="text-[#e91e8c] font-medium">85%</span></div>
+          <div class="h-1.5 bg-white/10 rounded-full overflow-hidden"><div class="bar-fill h-full bg-gradient-to-r from-[#e91e8c] to-[#ff6eb4] rounded-full" style="width:85%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm mb-2"><span>Tailwind CSS</span><span class="text-[#e91e8c] font-medium">En cours</span></div>
+          <div class="h-1.5 bg-white/10 rounded-full overflow-hidden"><div class="bar-fill h-full bg-gradient-to-r from-[#e91e8c] to-[#ff6eb4] rounded-full" style="width:45%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm mb-2"><span>VBA Excel</span><span class="text-[#e91e8c] font-medium">70%</span></div>
+          <div class="h-1.5 bg-white/10 rounded-full overflow-hidden"><div class="bar-fill h-full bg-gradient-to-r from-[#e91e8c] to-[#ff6eb4] rounded-full" style="width:70%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm mb-2"><span>JavaScript</span><span class="text-[#e91e8c] font-medium">Intermédiaire</span></div>
+          <div class="h-1.5 bg-white/10 rounded-full overflow-hidden"><div class="bar-fill h-full bg-gradient-to-r from-[#e91e8c] to-[#ff6eb4] rounded-full" style="width:50%"></div></div>
+        </div>
+      </div>
+      <div class="space-y-5">
+        <div>
+          <div class="flex justify-between text-sm mb-2"><span>PHP / SQL</span><span class="text-[#e91e8c] font-medium">60%</span></div>
+          <div class="h-1.5 bg-white/10 rounded-full overflow-hidden"><div class="bar-fill h-full bg-gradient-to-r from-[#e91e8c] to-[#ff6eb4] rounded-full" style="width:60%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm mb-2"><span>SAGE 100 & X3</span><span class="text-[#e91e8c] font-medium">70%</span></div>
+          <div class="h-1.5 bg-white/10 rounded-full overflow-hidden"><div class="bar-fill h-full bg-gradient-to-r from-[#e91e8c] to-[#ff6eb4] rounded-full" style="width:70%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm mb-2"><span>Microsoft Office</span><span class="text-[#e91e8c] font-medium">85%</span></div>
+          <div class="h-1.5 bg-white/10 rounded-full overflow-hidden"><div class="bar-fill h-full bg-gradient-to-r from-[#e91e8c] to-[#ff6eb4] rounded-full" style="width:85%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CERTIFICATIONS ── -->
+  <section class="bg-[#111] border-t border-white/5 py-16 md:py-24 px-6 md:px-16" id="certifications">
+    <div class="max-w-6xl mx-auto">
+      <p class="flex items-center gap-3 text-[11px] tracking-widest uppercase text-[#e91e8c] mb-4 before:content-[''] before:w-5 before:h-0.5 before:bg-[#e91e8c]">Documents officiels</p>
+      <h2 class="text-3xl md:text-4xl font-bold mb-10 md:mb-12">Certifications & <span class="text-[#e91e8c]">Attestations</span></h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+        <div class="card-hover bg-white/[0.04] border border-white/[0.08] rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-11 h-11 rounded-xl bg-[#e91e8c]/15 flex items-center justify-center text-2xl mb-4">📄</div>
+            <p class="text-[11px] text-[#e91e8c]/70 tracking-widest font-semibold mb-2">ATTESTATION</p>
+            <h3 class="text-[16px] font-semibold mb-2">Licence — Management Informatisé des Organisations</h3>
+            <p class="text-[13px] text-white/45 leading-relaxed">Université Assane SECK de Ziguinchor — 2022–2025.</p>
+          </div>
+          <a href="Doc/Attestation_Licence.pdf" download class="mt-5 inline-flex items-center gap-2 text-sm text-[#e91e8c] font-medium no-underline">⬇ Télécharger</a>
+        </div>
+
+        <div class="card-hover bg-white/[0.04] border border-white/[0.08] rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-11 h-11 rounded-xl bg-[#e91e8c]/15 flex items-center justify-center text-2xl mb-4">🏆</div>
+            <p class="text-[11px] text-[#e91e8c]/70 tracking-widest font-semibold mb-2">CERTIFICATION</p>
+            <h3 class="text-[16px] font-semibold mb-2">WordPress</h3>
+            <p class="text-[13px] text-white/45 leading-relaxed">Certification en développement et gestion de sites WordPress.</p>
+          </div>
+          <a href="Doc/certificat_WordPress.pdf" download class="mt-5 inline-flex items-center gap-2 text-sm text-[#e91e8c] font-medium no-underline">⬇ Télécharger</a>
+        </div>
+
+        <div class="card-hover bg-white/[0.04] border border-white/[0.08] rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-11 h-11 rounded-xl bg-[#e91e8c]/15 flex items-center justify-center text-2xl mb-4">📄</div>
+            <p class="text-[11px] text-[#e91e8c]/70 tracking-widest font-semibold mb-2">ATTESTATION DE STAGE</p>
+            <h3 class="text-[16px] font-semibold mb-2">Kossam SDE</h3>
+            <p class="text-[13px] text-white/45 leading-relaxed">Stage pluridisciplinaire — Comptabilité, contrôle de gestion & collecte de données. Août–Sept. 2025.</p>
+          </div>
+          <a href="Doc/Attestation_stage_KSDE (2).pdf" download class="mt-5 inline-flex items-center gap-2 text-sm text-[#e91e8c] font-medium no-underline">⬇ Télécharger</a>
+        </div>
+
+        <div class="card-hover bg-white/[0.04] border border-white/[0.08] rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-11 h-11 rounded-xl bg-[#e91e8c]/15 flex items-center justify-center text-2xl mb-4">📄</div>
+            <p class="text-[11px] text-[#e91e8c]/70 tracking-widest font-semibold mb-2">ATTESTATION</p>
+            <h3 class="text-[16px] font-semibold mb-2">Assistante Communication</h3>
+            <p class="text-[13px] text-white/45 leading-relaxed">Amicale MIO, Ziguinchor — Communication interne/externe & coordination d'événements. 2023–2024.</p>
+          </div>
+          <a href="Doc/AEMIO (2).pdf" download class="mt-5 inline-flex items-center gap-2 text-sm text-[#e91e8c] font-medium no-underline">⬇ Télécharger</a>
+        </div>
+
+        <div class="card-hover bg-white/[0.04] border border-white/[0.08] rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-11 h-11 rounded-xl bg-[#e91e8c]/15 flex items-center justify-center text-2xl mb-4">📄</div>
+            <p class="text-[11px] text-[#e91e8c]/70 tracking-widest font-semibold mb-2">ATTESTATION D'ACTIVITÉ</p>
+            <h3 class="text-[16px] font-semibold mb-2">Ferme intégrée — Kossam SDE</h3>
+            <p class="text-[13px] text-white/45 leading-relaxed">Suivi de production laitière & engagement communautaire, Niari – Richard Toll. Janv.–Mars 2023.</p>
+          </div>
+          <a href="Doc/Incubation.pdf" download class="mt-5 inline-flex items-center gap-2 text-sm text-[#e91e8c] font-medium no-underline">⬇ Télécharger</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="gradient-contact py-20 md:py-28 px-6 md:px-16 text-center" id="contact-section">
+    <h2 class="text-3xl md:text-5xl font-bold mb-4">Travaillons <span class="text-[#e91e8c]">ensemble</span></h2>
+    <p class="text-white/40 text-base mb-10 md:mb-12">Disponible pour tout échange ou opportunité.</p>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="mailto:ramaka947@gmail.com" class="contact-card bg-white/[0.05] border border-white/10 rounded-2xl px-6 md:px-8 py-4 md:py-5 flex items-center gap-3 no-underline text-white text-[14px] md:text-[15px]"><span class="text-2xl">✉️</span> ramaka947@gmail.com</a>
+      <a href="https://wa.me/221781129952" target="_blank" class="contact-card bg-white/[0.05] border border-white/10 rounded-2xl px-6 md:px-8 py-4 md:py-5 flex items-center gap-3 no-underline text-white text-[14px] md:text-[15px]"><span class="text-2xl">📞</span> WhatsApp</a>
+      <a href="#" class="contact-card bg-white/[0.05] border border-white/10 rounded-2xl px-6 md:px-8 py-4 md:py-5 flex items-center gap-3 no-underline text-white text-[14px] md:text-[15px]"><span class="text-2xl">📍</span> Dakar, Sénégal</a>
+    </div>
+  </section>
+
+  <footer class="bg-[#0a0a0a] border-t border-white/5 py-8 md:py-10 px-6 md:px-16">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-white/20 text-center md:text-left">
+      <p>© 2026 Rama KA — Tous droits réservés</p>
+      <p>Titulaire d'une licence en MIO · Université Assane SECK de Ziguinchor · Formation Bakeli</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
